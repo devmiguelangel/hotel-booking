@@ -7,8 +7,8 @@ class RoomBooking(models.Model):
     """ Room booking model """
 
     id = models.BigAutoField(primary_key=True, editable=False)
-    booking = models.ForeignKey(Booking, on_delete=models.PROTECT)
-    room = models.ForeignKey(Room, on_delete=models.PROTECT)
+    booking = models.ForeignKey(Booking, on_delete=models.PROTECT, related_name='rooms')
+    room = models.ForeignKey(Room, on_delete=models.PROTECT, related_name='bookings')
     rate = models.FloatField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

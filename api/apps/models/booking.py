@@ -9,7 +9,7 @@ class Booking(models.Model):
     BOOKING_STATUS_CHOICES = [
         ('pending', 'Pendiente'),
         ('paid', 'Pagado'),
-        ('cancelled', 'Cancelado'),
+        ('deleted', 'Eliminado'),
     ]
 
     id = models.BigAutoField(primary_key=True, editable=False)
@@ -29,4 +29,4 @@ class Booking(models.Model):
         verbose_name = 'Booking'
 
     def __str__(self):
-        return '{floor} - {room_number}'.format(floor=self.floor, room_number=self.room_number)
+        return '{pk} - {client}'.format(pk=self.pk, client=self.client)

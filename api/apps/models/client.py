@@ -7,6 +7,7 @@ class Client(models.Model):
     id = models.BigAutoField(primary_key=True, editable=False)
     first_name = models.CharField(max_length=60)
     last_name = models.CharField(max_length=60)
+    dni = models.CharField(max_length=14)
     address = models.TextField()
     country = models.CharField(max_length=60)
     city = models.CharField(max_length=60)

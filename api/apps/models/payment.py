@@ -24,6 +24,8 @@ class Payment(models.Model):
     amount = models.FloatField()
     payment_type = models.CharField(max_length=20, choices=PAYMENT_TYPE_CHOICES)
     payment_status = models.CharField(max_length=20, choices=PAYMENT_STATUS_CHOICES)
+    invoice_name = models.CharField(max_length=30)
+    invoice_number = models.CharField(max_length=30)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 

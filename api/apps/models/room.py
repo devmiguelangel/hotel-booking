@@ -13,8 +13,8 @@ class Room(models.Model):
 
     ROOM_STATUS_CHOICES = [
         ('available', 'Disponible'),
-        ('occupied', 'Ocupado'),
         ('reserved', 'Reservado'),
+        ('occupied', 'Ocupado'),
     ]
 
     id = models.BigAutoField(primary_key=True, editable=False)
