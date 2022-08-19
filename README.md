@@ -1,5 +1,7 @@
 # Booking API
 
+API para la reserva de habitaciones en un hotel
+
 ## Construir e iniciar la aplicación
 
 > ### Modificar las variables de entorno de la carpeta compose/envs según se requiera
@@ -30,7 +32,7 @@ docker exec -it booking_api python manage.py createsuperuser
 http://127.0.0.1:8000/admin
 ```
 
-## Flujo para realizar reserva
+## Flujo para realizar una reserva
 
 1. ### http://127.0.0.1:8000/api/rooms
 
@@ -81,3 +83,7 @@ METHOD: **POST**
 ## Postman documentation
 
 https://documenter.getpostman.com/view/21327328/VUqoQJ85
+
+## Diagrama
+
+<img src="./room _bookings.png" width="500" />
