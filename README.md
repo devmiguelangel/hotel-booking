@@ -4,9 +4,15 @@ API para la reserva de habitaciones en un hotel
 
 ## Construir e iniciar la aplicación
 
-> ### Modificar las variables de entorno de la carpeta compose/envs según se requiera
+> ### Ejecutar los comandos en la raíz del proyecto
 
 ```bash
+# Copiar y modificar el archivo app.env
+cp ./compose/envs/api.env.example ./compose/envs/api.env
+
+# Copiar y modificar el archivo db.env
+cp ./compose/envs/db.env.example ./compose/envs/db.env
+
 # export COMPOSE_FILE=docker-compose.local.yml
 
 # Construir las imágenes
@@ -27,7 +33,7 @@ docker exec -it booking_api python manage.py loaddata apps/fixtures/rooms.json
 # Crear un super usuario
 docker exec -it booking_api python manage.py createsuperuser
 
-# URL para acceder al administrador
+# URL para acceder al administrador con el usuario de prueba
 
 http://127.0.0.1:8000/admin
 ```
@@ -68,7 +74,7 @@ METHOD: **PUT**
 
 6. ### http://127.0.0.1:8000/api/bookings/{booking_id}/pay
 
-La reserva es hace oficial una vez se que se efectúa el pago
+La reserva se hace oficial una vez se que se efectúa el pago
 
 Son necesarios los datos de facturación, el tipo de pago y el monto
 
