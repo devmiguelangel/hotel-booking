@@ -42,7 +42,7 @@ http://127.0.0.1:8000/admin
 
 1. ### http://127.0.0.1:8000/api/rooms
 
-Obtener una lista de habitaciones disponibles
+Obtener una lista de habitaciones disponibles para que el cliente pueda elegir una o varias
 
 METHOD: **GET**
 
@@ -54,7 +54,7 @@ METHOD: **POST**
 
 3. ### http://127.0.0.1:8000/api/clients/{client_id}
 
-De manera opcional el cliente puede editar sus datos ingresados
+De manera opcional el cliente puede editar los datos ingresados
 
 METHOD: **PUT**
 
